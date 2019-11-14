@@ -2,41 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
 
-    <title>Pig Dice</title>
+    <title>WeekdayCalc</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <h1>Pig Dice!</h1>
+    <div class="card">
+      <label for="input">
+        <form id="form">
+          <input id="input" type="text" name="dateInput" value="">
+          <button type="submit" name="button">Push the F*^%$!!</button>
+        </form>
+
+      </label>
     </div>
-    <div class="container">
-      <form class="form-group" action="index.html" method="post">
-        <label for="player1">Type your name!</label>
-        <input type="text" class="form-control" id="player1Name" placeholder="Player1" value="">
-        <br>
-        <label for="player2">Type your name!</label>
-        <input type="text"  class="form-control" id="player2Name" placeholder="Player2" value="">
-        <br>
-        <button id="newGame" class="btn-info" type="button" name="new">New Game</button>
-        <button id="roll" class="btn-info" type="button" name="roll">Roll</button>
-        <button id="hold" class="btn-info" type="button" name="Hold">Hold</button>
-        <button id="refresh" class="btn-info" type="button" name="refresh">Refresh</button>
-      </form>
-      <div class="row">
-        <div class="col playerDisplay">
-          <h3 id="player1name">grgkh</h3>
-          <h4>Total Score</h4>
-          <p id="player1"></p>
-        </div>
-        <div class="col playerDisplay ">
-          <h3 id="player2name"></h3>
-          <h4>Total Score</h4>
-          <p id="player2"></p>
-        </div>
-      </div>
-      <div class="row" id="roundScore">
-        <center><h4>Round Score</h4></center>
-        <p><span id="round"></span></p>
-      </div>
-    </div>
+
+
+<div name="divOutput" class="card">
+
+</div>
+
+
   </body>
 </html>
+
+
+
+<!-- This prompt will give you the chance to try out working with the Date object. Create an app for calculating the day for any given date. The user should be able to enter in a date and see what day of the week that date occured on. If you enjoy brain teasers, try to work out your own algorithm. If you need help getting started, check out the Wikipedia article. The program should be able to handle past dates, future dates, and invalid dates (user should be notified if the date is invalid). -->

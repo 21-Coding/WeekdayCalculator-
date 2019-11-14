@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+
 module.exports = {
-  entry: './src/scripts.js',
+  entry: './src/main.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -17,7 +18,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Title',
+      title: 'WeekdayCalc',
       template: './src/index.html',
       inject: 'body'
     })
@@ -33,19 +34,12 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+            /node_modules/,
+            /spec/
+          ],
         loader: "eslint-loader"
-      },
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-          presets: ['@babel/preset-env']
-       }
-     }
-   }
+      }
     ]
   }
 };
